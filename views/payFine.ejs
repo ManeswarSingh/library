@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Fine - Library Management</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Pay Fine</h1>
+    <form action="/books/payFine/<%= book._id %>" method="POST">
+        <div>
+            <label for="fineAmount">Fine Amount:</label>
+            <input type="number" name="fineAmount" required>
+        </div>
+        <div>
+            <label for="remarks">Remarks:</label>
+            <textarea name="remarks"></textarea>
+        </div>
+        <button type="submit">Confirm Payment</button>
+    </form>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

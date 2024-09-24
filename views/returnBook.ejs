@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book - Library Management</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Return Book</h1>
+    <form action="/books/return/<%= book._id %>" method="POST">
+        <div>
+            <label>Book Title:</label>
+            <input type="text" value="<%= book.title %>" disabled>
+        </div>
+        <div>
+            <label>Author:</label>
+            <input type="text" value="<%= book.author %>" disabled>
+        </div>
+        <div>
+            <label>Return Date:</label>
+            <input type="date" name="returnDate" value="<%= book.returnDate %>" required>
+        </div>
+        <button type="submit">Confirm Return</button>
+    </form>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

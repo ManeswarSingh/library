@@ -1,0 +1,3 @@
+#.env file
+
+MONGO_URI = mongodb+srv://singhmaneshwar08:singh@cluster0.e1cmb.mongodb.net/users
